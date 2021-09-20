@@ -28,7 +28,7 @@ function userPrompts(){
   let userChoice1 = prompt("How long is your password? (must be at least 8 characters)");
   if (userChoice1 < 8 || userChoice1 > 128){
     alert("Password must be between 8 to 128 characters long. Start again.");
-  return
+  return userPrompts();
 }
   let userChoice2 = confirm("Click OK if you want uppercase letters.");
   let userChoice3 = confirm("Click ok if you want lowercase letters.");
@@ -52,8 +52,8 @@ function generatePassword() {
 
 if(options.upper==true){
   finalCharacters=finalCharacters.concat(upper)
-  console.log(finalCharacters)
 }
+
 if(options.lower==true){
   finalCharacters=finalCharacters.concat(lower)
 }
